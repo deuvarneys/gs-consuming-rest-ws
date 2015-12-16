@@ -8,18 +8,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+public class Application {
+//public class Application implements CommandLineRunner {
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    //private static final Logger log = LoggerFactory.getLogger(Application.class);
 
     public static void main(String args[]) {
-        SpringApplication.run(Application.class);
+    	//log.warn("args" + args);
+        SpringApplication.run(Application.class, args);
     }
 
+    /*
     @Override
     public void run(String... strings) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
         log.info(quote.toString());
     }
+    */
 }
